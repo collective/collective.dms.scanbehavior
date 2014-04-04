@@ -44,6 +44,12 @@ setup(
         'five.grok',
         'plone.api',
         'setuptools',
+        'plone.behavior',
+        'plone.directives.form',
+        'zope.schema',
+        'zope.interface',
+        'zope.component',
+        'rwproperty',
     ],
     extras_require={
         'test': [
