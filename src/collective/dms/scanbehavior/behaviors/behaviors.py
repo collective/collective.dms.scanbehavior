@@ -7,7 +7,7 @@ from plone.autoform.interfaces import IFormFieldProvider
 from collective.dms.scanbehavior import _
 
 
-class IScan(model.Schema):
+class IScanFields(model.Schema):
 
     model.fieldset(
             'scan',
@@ -55,4 +55,4 @@ class IScan(model.Schema):
         required=False,
     )
 
-alsoProvides(IScan, IFormFieldProvider)
+alsoProvides(IScanFields, IFormFieldProvider)

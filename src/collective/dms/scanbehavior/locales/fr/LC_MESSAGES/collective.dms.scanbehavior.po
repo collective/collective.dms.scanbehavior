@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-04-04 11:31+0000\n"
+"POT-Creation-Date: 2014-04-15 09:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,32 +14,38 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../behaviors/behaviors.py:26
+msgid "Adds scan information fields"
+msgstr "Ajoute les champs d'informations de numérisation"
+
+msgid "Scan metadata"
+msgstr "Métadonnées de numérisation"
+
+#: ../behaviors/behaviors.py:14
 msgid "Scan"
 msgstr ""
 
 #. Default: "Pages numbers"
-#: ../behaviors/behaviors.py:43
+#: ../behaviors/behaviors.py:31
 msgid "pages_number"
 msgstr "Nombre de pages"
 
 #. Default: "Scan date"
-#: ../behaviors/behaviors.py:50
+#: ../behaviors/behaviors.py:38
 msgid "scan_date"
 msgstr "Date de scan"
 
 #. Default: "Scan id"
-#: ../behaviors/behaviors.py:36
+#: ../behaviors/behaviors.py:24
 msgid "scan_id"
 msgstr "Identifiant de scan"
 
 #. Default: "Scan user"
-#: ../behaviors/behaviors.py:57
+#: ../behaviors/behaviors.py:45
 msgid "scan_user"
-msgstr "Utilisateur de scan"
+msgstr "Opérateur"
 
 #. Default: "scanner"
-#: ../behaviors/behaviors.py:64
+#: ../behaviors/behaviors.py:52
 msgid "scanner"
 msgstr "Scanner"
 

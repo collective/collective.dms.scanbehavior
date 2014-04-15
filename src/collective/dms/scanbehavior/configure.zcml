@@ -14,7 +14,6 @@
     <include package="plone.api" />
 
     <include package=".browser" />
-    <include package=".content" />
     <include package=".behaviors" />
 
     <grok:grok package="." />
@@ -26,12 +25,5 @@
         description="Installs the collective.dms.scanbehavior add-on."
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
-
-    <genericsetup:importStep
-        name="collective.dms.scanbehavior-postInstall"
-        title="collective.dms.scanbehavior post_install import step"
-        description="Post install import step from collective.dms.scanbehavior"
-        handler=".setuphandlers.post_install">
-    </genericsetup:importStep>
 
 </configure>
