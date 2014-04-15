@@ -7,4 +7,4 @@ include *.py
 include .travis.yml
 recursive-include docs *.GPL
 recursive-include docs *.rst
-recursive-include buildour.d/*.cfg
+recursive-include buildout.d *.cfg
