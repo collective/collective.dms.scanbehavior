@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.3 (unreleased)
-----------------
+0.2.1 (2014-09-02)
+------------------
 
-- Nothing changed yet.
-
+- Updated changes.
+- Corrected manifest.
 
 0.2 (2014-04-15)
 ----------------
