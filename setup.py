@@ -19,7 +19,7 @@ long_description = (
 
 setup(
     name='collective.dms.scanbehavior',
-    version='0.2.1',
+    version='0.3.dev0',
     description="",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
