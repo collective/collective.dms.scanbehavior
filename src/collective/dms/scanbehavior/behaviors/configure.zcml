@@ -15,4 +15,10 @@
         provides=".behaviors.IScanFields"
         for="plone.dexterity.interfaces.IDexterityContent"
         />
+
+    <adapter
+        name="scan_id"
+        factory=".behaviors.scan_id_indexer"
+        />
+
 </configure>

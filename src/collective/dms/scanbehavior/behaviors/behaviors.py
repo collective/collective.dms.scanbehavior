@@ -1,9 +1,8 @@
 from zope.interface import alsoProvides
 from zope import schema
-from plone.autoform import directives as form
-from plone.supermodel import model
-from plone.dexterity.interfaces import IDexterityContent
 from plone.autoform.interfaces import IFormFieldProvider
+from plone.indexer import indexer
+from plone.supermodel import model
 from collective.dms.scanbehavior import _
 
 
@@ -56,3 +55,13 @@ class IScanFields(model.Schema):
     )
 
 alsoProvides(IScanFields, IFormFieldProvider)
+
+
+@indexer(IScanFields)
+def scan_id_indexer(obj):
+    """
+        indexer method
+    """
+    if not obj.scan_id:
+        return None
+    return obj.scan_id
