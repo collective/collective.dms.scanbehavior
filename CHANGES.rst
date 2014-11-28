@@ -2,10 +2,10 @@ Changelog
 =========
 
 
-0.3 (unreleased)
+0.3 (2014-11-28)
 ----------------
 
-- Nothing changed yet.
+- Added scan_id as index [sgeulette]
 
 
 0.2.1 (2014-09-02)
