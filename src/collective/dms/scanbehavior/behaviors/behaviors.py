@@ -1,5 +1,6 @@
 from zope.interface import alsoProvides
 from zope import schema
+from Products.CMFPlone.utils import base_hasattr
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.indexer import indexer
 from plone.supermodel import model
@@ -68,6 +69,5 @@ def scan_id_indexer(obj):
     """
         indexer method
     """
-    if not obj.scan_id:
-        return None
-    return obj.scan_id
+    if base_hasattr(obj, 'scan_id'):
+        return obj.scan_id
