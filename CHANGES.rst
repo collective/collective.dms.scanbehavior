@@ -2,10 +2,10 @@ Changelog
 =========
 
 
-0.3.2 (unreleased)
+0.3.2 (2015-06-05)
 ------------------
 
-- Nothing changed yet.
+- Corrected MANIFEST [sgeulette]
 
 
 0.3.1 (2015-06-05)
