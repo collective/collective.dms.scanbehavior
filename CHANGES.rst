@@ -5,7 +5,7 @@ Changelog
 0.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Modified scan_id index [sgeulette]
 
 
 0.3 (2014-11-28)
