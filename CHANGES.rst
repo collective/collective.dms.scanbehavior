@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.3.3 (unreleased)
+0.3.3 (2015-11-24)
 ------------------
 
 - Don't store None in catalog. [sgeulette]
