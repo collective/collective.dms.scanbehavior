@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.4 (unreleased)
+0.4 (2016-04-20)
 ----------------
 
 - Add version attribute.
