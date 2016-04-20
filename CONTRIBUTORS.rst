@@ -1,1 +1,2 @@
 - Franck NGAHA, franck.o.ngaha@gmail.com
+- Stephan GEULETTE, stephan.geulette@imio.be
