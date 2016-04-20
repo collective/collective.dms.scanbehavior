@@ -1,3 +1,6 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -12,11 +15,11 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: collective.dms.scanbehavior\n"
 
 #: ../behaviors/configure.zcml:17
 msgid "Adds scan information fields"
-msgstr "Ajoute les champs d'informations de numérisation"
+msgstr ""
 
 #: ../configure.zcml:23
 msgid "Installs the collective.dms.scanbehavior add-on."
@@ -24,11 +27,11 @@ msgstr ""
 
 #: ../behaviors/behaviors.py:15
 msgid "Scan"
-msgstr "Scan"
+msgstr ""
 
 #: ../behaviors/configure.zcml:17
 msgid "Scan metadata"
-msgstr "Métadonnées de numérisation"
+msgstr ""
 
 #: ../testing.zcml:16
 msgid "Steps to ease tests of collective.dms.scanbehavior"
@@ -36,7 +39,7 @@ msgstr ""
 
 #: ../behaviors/behaviors.py:34
 msgid "Version"
-msgstr "Version"
+msgstr ""
 
 #: ../configure.zcml:23
 msgid "collective.dms.scanbehavior"
@@ -49,24 +52,24 @@ msgstr ""
 #. Default: "Pages numbers"
 #: ../behaviors/behaviors.py:40
 msgid "pages_number"
-msgstr "Nombre de pages"
+msgstr ""
 
 #. Default: "Scan date"
 #: ../behaviors/behaviors.py:48
 msgid "scan_date"
-msgstr "Date de scan"
+msgstr ""
 
 #. Default: "Scan id"
 #: ../behaviors/behaviors.py:26
 msgid "scan_id"
-msgstr "Identifiant de scan"
+msgstr ""
 
 #. Default: "Scan user"
 #: ../behaviors/behaviors.py:56
 msgid "scan_user"
-msgstr "Opérateur"
+msgstr ""
 
 #. Default: "scanner"
 #: ../behaviors/behaviors.py:64
 msgid "scanner"
-msgstr "Scanner"
+msgstr ""

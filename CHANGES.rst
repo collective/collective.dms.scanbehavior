@@ -5,32 +5,28 @@ Changelog
 0.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- Add version attribute.
+  [sgeulette]
 
 0.3.3 (2015-11-24)
 ------------------
 
 - Don't store None in catalog. [sgeulette]
 
-
 0.3.2 (2015-06-05)
 ------------------
 
 - Corrected MANIFEST [sgeulette]
-
 
 0.3.1 (2015-06-05)
 ------------------
 
 - Modified scan_id index [sgeulette]
 
-
 0.3 (2014-11-28)
 ----------------
 
 - Added scan_id as index [sgeulette]
-
 
 0.2.1 (2014-09-02)
 ------------------
@@ -54,4 +50,3 @@ Changelog
 
 - Initial release.
   [fngaha]
-

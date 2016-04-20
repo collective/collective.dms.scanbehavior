@@ -15,6 +15,7 @@ class IScanFields(model.Schema):
         label=_(u'Scan'),
         fields=(
             'scan_id',
+            'version',
             'pages_number',
             'scan_date',
             'scan_user',
@@ -28,6 +29,12 @@ class IScanFields(model.Schema):
             default=u'Scan id',
         ),
         required=False,
+    )
+
+    version = schema.Int(
+        title=_(u'Version'),
+        required=False,
+        default=0
     )
 
     pages_number = schema.Int(
