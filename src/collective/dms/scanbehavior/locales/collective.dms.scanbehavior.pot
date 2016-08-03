@@ -73,3 +73,7 @@ msgstr ""
 #: ../behaviors/behaviors.py:64
 msgid "scanner"
 msgstr ""
+
+#: ../behaviors/behaviors.py:73
+msgid "Signed version"
+msgstr ""

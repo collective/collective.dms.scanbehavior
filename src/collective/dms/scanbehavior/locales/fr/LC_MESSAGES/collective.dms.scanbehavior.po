@@ -70,3 +70,7 @@ msgstr "Opérateur"
 #: ../behaviors/behaviors.py:64
 msgid "scanner"
 msgstr "Scanner"
+
+#: ../behaviors/behaviors.py:73
+msgid "Signed version"
+msgstr "Version signée"
