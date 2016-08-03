@@ -69,6 +69,11 @@ class IScanFields(model.Schema):
         required=False,
     )
 
+    signed = schema.Bool(
+        title=_(u'Signed version'),
+        default=False,
+    )
+
 alsoProvides(IScanFields, IFormFieldProvider)
 
 
