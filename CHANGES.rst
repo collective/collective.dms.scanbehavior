@@ -5,8 +5,8 @@ Changelog
 0.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- Moved version attribute to the scan tab.
+  [gbastien]
 
 0.4 (2016-04-20)
 ----------------

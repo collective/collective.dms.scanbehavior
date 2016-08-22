@@ -20,6 +20,7 @@ class IScanFields(model.Schema):
             'scan_date',
             'scan_user',
             'scanner',
+            'signed',
         ),
     )
 
