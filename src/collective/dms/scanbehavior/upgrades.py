@@ -11,7 +11,6 @@ def v2(context):
     setup = api.portal.get_tool('portal_setup')
     setup.runImportStepFromProfile('profile-collective.dms.scanbehavior:default', 'catalog')
     catalog = api.portal.get_tool('portal_catalog')
-    import ipdb; ipdb.set_trace()
     ftis = api.portal.get_tool('portal_types')
     types = []
     for fti in ftis.listTypeInfo():
