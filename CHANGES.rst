@@ -7,6 +7,10 @@ Changelog
 
 - Moved version attribute to the scan tab.
   [gbastien]
+- Move the signed attribute from IDmsFile schema
+  [mpeeters]
+- Added signed index
+  [sgeulette]
 
 0.4 (2016-04-20)
 ----------------

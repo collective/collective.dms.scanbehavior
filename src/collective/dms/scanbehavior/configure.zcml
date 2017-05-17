@@ -8,7 +8,7 @@
     <i18n:registerTranslations directory="locales" />
 
     <five:registerPackage package="." initialize=".initialize" />
-    
+
     <include package="plone.api" />
 
     <include package=".browser" />
@@ -21,5 +21,13 @@
         description="Installs the collective.dms.scanbehavior add-on."
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
+
+    <genericsetup:upgradeStep
+        title="Migration profile for collective.dms.scanbehavior to 2"
+        description="Upgrade from 1 to 2"
+        source="1"
+        destination="2"
+        handler=".upgrades.v2"
+        profile="collective.dms.scanbehavior:default" />
 
 </configure>
