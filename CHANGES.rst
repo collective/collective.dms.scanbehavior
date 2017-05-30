@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.5 (unreleased)
+1.0 (2017-05-30)
 ----------------
 
 - Moved version attribute to the scan tab.
