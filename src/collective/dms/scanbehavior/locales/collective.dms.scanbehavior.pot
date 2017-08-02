@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-08-02 12:38+0000\n"
+"POT-Creation-Date: 2017-08-02 12:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,28 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.dms.scanbehavior\n"
 
+#: ../behaviors/configure.zcml:17
+msgid "Adds scan information fields"
+msgstr ""
+
+#: ../configure.zcml:23
+msgid "Installs the collective.dms.scanbehavior add-on."
+msgstr ""
+
 #: ../behaviors/behaviors.py:23
 msgid "Scan"
 msgstr ""
 
+#: ../behaviors/configure.zcml:17
+msgid "Scan metadata"
+msgstr ""
+
 #: ../behaviors/behaviors.py:88
 msgid "Signed version"
+msgstr ""
+
+#: ../testing.zcml:16
+msgid "Steps to ease tests of collective.dms.scanbehavior"
 msgstr ""
 
 #: ../behaviors/behaviors.py:83
@@ -31,6 +47,14 @@ msgstr ""
 
 #: ../behaviors/behaviors.py:45
 msgid "Version"
+msgstr ""
+
+#: ../configure.zcml:23
+msgid "collective.dms.scanbehavior"
+msgstr ""
+
+#: ../testing.zcml:16
+msgid "collective.dms.scanbehavior tests"
 msgstr ""
 
 #. Default: "Pages numbers"
@@ -57,4 +81,3 @@ msgstr ""
 #: ../behaviors/behaviors.py:75
 msgid "scanner"
 msgstr ""
-
