@@ -1,6 +1,14 @@
+# -*- coding: utf-8 -*-
+
+from Acquisition import aq_base
+
+from zope.component import adapter
 from zope.interface import alsoProvides
+from zope.interface import implementer
+
 from zope import schema
 from plone.autoform.interfaces import IFormFieldProvider
+from plone.dexterity.interfaces import IDexterityContent
 from plone.indexer import indexer
 from plone.supermodel import model
 from Products.CMFPlone.utils import base_hasattr
@@ -20,6 +28,7 @@ class IScanFields(model.Schema):
             'scan_date',
             'scan_user',
             'scanner',
+            'to_sign',
             'signed',
         ),
     )
@@ -68,6 +77,11 @@ class IScanFields(model.Schema):
             default=u'scanner',
         ),
         required=False,
+    )
+
+    to_sign = schema.Bool(
+        title=_(u'To sign?'),
+        default=False,
     )
 
     signed = schema.Bool(

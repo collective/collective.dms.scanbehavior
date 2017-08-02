@@ -5,8 +5,8 @@ Changelog
 1.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- Added field `to_sign` to the behavior.
+  [gbastien]
 
 1.0 (2017-05-30)
 ----------------

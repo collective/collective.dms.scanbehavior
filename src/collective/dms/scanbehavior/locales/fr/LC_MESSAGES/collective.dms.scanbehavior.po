@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-04-20 09:45+0000\n"
+"POT-Creation-Date: 2017-08-02 12:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,63 +14,44 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../behaviors/configure.zcml:17
-msgid "Adds scan information fields"
-msgstr "Ajoute les champs d'informations de numérisation"
-
-#: ../configure.zcml:23
-msgid "Installs the collective.dms.scanbehavior add-on."
-msgstr ""
-
-#: ../behaviors/behaviors.py:15
+#: ../behaviors/behaviors.py:23
 msgid "Scan"
 msgstr "Scan"
 
-#: ../behaviors/configure.zcml:17
-msgid "Scan metadata"
-msgstr "Métadonnées de numérisation"
+#: ../behaviors/behaviors.py:88
+msgid "Signed version"
+msgstr "Version signée"
 
-#: ../testing.zcml:16
-msgid "Steps to ease tests of collective.dms.scanbehavior"
-msgstr ""
+#: ../behaviors/behaviors.py:83
+msgid "To sign?"
+msgstr "À signer?"
 
-#: ../behaviors/behaviors.py:34
+#: ../behaviors/behaviors.py:45
 msgid "Version"
 msgstr "Version"
 
-#: ../configure.zcml:23
-msgid "collective.dms.scanbehavior"
-msgstr ""
-
-#: ../testing.zcml:16
-msgid "collective.dms.scanbehavior tests"
-msgstr ""
-
 #. Default: "Pages numbers"
-#: ../behaviors/behaviors.py:40
+#: ../behaviors/behaviors.py:51
 msgid "pages_number"
 msgstr "Nombre de pages"
 
 #. Default: "Scan date"
-#: ../behaviors/behaviors.py:48
+#: ../behaviors/behaviors.py:59
 msgid "scan_date"
 msgstr "Date de scan"
 
 #. Default: "Scan id"
-#: ../behaviors/behaviors.py:26
+#: ../behaviors/behaviors.py:37
 msgid "scan_id"
 msgstr "Identifiant de scan"
 
 #. Default: "Scan user"
-#: ../behaviors/behaviors.py:56
+#: ../behaviors/behaviors.py:67
 msgid "scan_user"
 msgstr "Opérateur"
 
 #. Default: "scanner"
-#: ../behaviors/behaviors.py:64
+#: ../behaviors/behaviors.py:75
 msgid "scanner"
 msgstr "Scanner"
 
-#: ../behaviors/behaviors.py:73
-msgid "Signed version"
-msgstr "Version signée"
