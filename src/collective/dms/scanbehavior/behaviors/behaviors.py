@@ -1,14 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from Acquisition import aq_base
-
-from zope.component import adapter
-from zope.interface import alsoProvides
-from zope.interface import implementer
-
 from zope import schema
+from zope.interface import alsoProvides
 from plone.autoform.interfaces import IFormFieldProvider
-from plone.dexterity.interfaces import IDexterityContent
 from plone.indexer import indexer
 from plone.supermodel import model
 from Products.CMFPlone.utils import base_hasattr
