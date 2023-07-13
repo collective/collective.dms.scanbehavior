@@ -9,6 +9,7 @@ from Products.CMFPlone.utils import base_hasattr
 from Products.PluginIndexes.common.UnIndex import _marker
 from collective.dms.scanbehavior import _
 
+import datetime
 
 class IScanFields(model.Schema):
 
@@ -55,6 +56,8 @@ class IScanFields(model.Schema):
             default=u'Scan date',
         ),
         required=False,
+        min=datetime.datetime(1990, 1, 1),
+        max=datetime.datetime.today(),
     )
 
     scan_user = schema.TextLine(
