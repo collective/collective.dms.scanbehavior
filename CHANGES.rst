@@ -5,8 +5,8 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- fix : [DMS-949] min & max for scan_date
+  [bleybaert]
 
 1.1 (2018-01-04)
 ----------------
