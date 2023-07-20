@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2 (unreleased)
+1.2 (2023-07-20)
 ----------------
 
 - fix : [DMS-949] min & max for scan_date
