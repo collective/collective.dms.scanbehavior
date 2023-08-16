@@ -5,8 +5,8 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- Improved date range.
+  [sgeulette]
 
 1.2 (2023-07-20)
 ----------------

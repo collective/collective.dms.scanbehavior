@@ -57,7 +57,7 @@ class IScanFields(model.Schema):
         ),
         required=False,
         min=datetime.datetime(1990, 1, 1),
-        max=datetime.datetime.today(),
+        max=datetime.datetime.today() + datetime.timedelta(days=7),
     )
 
     scan_user = schema.TextLine(
