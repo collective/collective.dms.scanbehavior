@@ -7,4 +7,4 @@ recursive-include docs *.GPL
 recursive-include docs *.rst
 recursive-exclude src *.pyc
 recursive-exclude buildout.d *.cfg
-exclude .travis.yml *.cfg bootstrap.py buildout.d
+exclude *.cfg buildout.d

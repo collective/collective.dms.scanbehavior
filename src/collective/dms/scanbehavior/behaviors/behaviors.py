@@ -87,6 +87,7 @@ class IScanFields(model.Schema):
         default=False,
     )
 
+
 alsoProvides(IScanFields, IFormFieldProvider)
 
 
