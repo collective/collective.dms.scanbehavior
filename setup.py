@@ -43,6 +43,7 @@ setup(
     install_requires=[
         'plone.api',
         'setuptools',
+        'plone.app.dexterity',
         'plone.behavior',
         'plone.directives.form',
         'zope.schema',
