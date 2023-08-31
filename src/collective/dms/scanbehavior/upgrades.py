@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-import logging
-
 from plone import api
 from plone.dexterity.interfaces import IDexterityFTI
+
+import logging
+
 
 logger = logging.getLogger('collective.dms.scanbehavior: upgrade. ')
 
@@ -24,4 +25,3 @@ def v2(context):
         obj = brain.getObject()
         obj.reindexObject(idxs=['signed'])
     logger.info("%d objects were migrated" % nb)
-

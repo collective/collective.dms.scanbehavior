@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 
-from zope import schema
-from zope.interface import alsoProvides
+from collective.dms.scanbehavior import _
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.indexer import indexer
 from plone.supermodel import model
 from Products.CMFPlone.utils import base_hasattr
 from Products.PluginIndexes.common.UnIndex import _marker
-from collective.dms.scanbehavior import _
+from zope import schema
+from zope.interface import alsoProvides
 
 import datetime
+
 
 class IScanFields(model.Schema):
 

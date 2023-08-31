@@ -7,6 +7,9 @@ Changelog
 
 - Improved date range.
   [sgeulette]
+- Cleanup: isort, use `unittest` instead `unittest2`,
+  removed dependency on `ecreall.helpers.testing`.
+  [gbastien]
 
 1.2 (2023-07-20)
 ----------------
