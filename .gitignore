@@ -5,10 +5,13 @@
 .mr.developer.cfg
 .project
 .pydevproject
+pyvenv.cfg
 .settings/
 bin/
 buildout-cache/
 develop-eggs/
+include/
+lib/
 parts/
 src/*
 !src/collective
