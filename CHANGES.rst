@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.3 (unreleased)
-----------------
+1.3.0 (2023-09-07)
+------------------
 
 - Improved date range.
   [sgeulette]

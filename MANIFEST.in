@@ -1,6 +1,6 @@
 graft src
 graft docs
-include *.rst *.in
+include *.rst *.in *.txt
 
 # added by check_manifest.py
 recursive-include docs *.GPL
