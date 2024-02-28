@@ -13,7 +13,6 @@
         title="Scan metadata"
         description="Adds scan information fields"
         provides=".behaviors.IScanFields"
-        for="plone.dexterity.interfaces.IDexterityContent"
         />
 
     <adapter

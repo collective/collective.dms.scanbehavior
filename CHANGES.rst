@@ -5,8 +5,8 @@ Changelog
 1.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Corrected behavior zcml definition to avoid message when Plone starts.
+  [sgeulette]
 
 1.3.0 (2023-09-07)
 ------------------
