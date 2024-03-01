@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3.1 (unreleased)
+1.3.1 (2024-03-01)
 ------------------
 
 - Corrected behavior zcml definition to avoid message when Plone starts.
