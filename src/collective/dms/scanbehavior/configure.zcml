@@ -22,12 +22,12 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
-    <genericsetup:upgradeStep
-        title="Migration profile for collective.dms.scanbehavior to 2"
-        description="Upgrade from 1 to 2"
-        source="1"
-        destination="2"
-        handler=".upgrades.v2"
-        profile="collective.dms.scanbehavior:default" />
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="collective.dms.scanbehavior uninstall"
+        directory="profiles/uninstall"
+        description="Uninstalls the collective.dms.scanbehavior add-on."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
 
 </configure>

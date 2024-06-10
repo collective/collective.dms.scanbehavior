@@ -2,7 +2,7 @@
 """Setup/installation tests for this package."""
 
 from collective.dms.scanbehavior.testing import IntegrationTestCase
-from plone import api
+from plone.base.utils import get_installer
 
 
 class TestInstall(IntegrationTestCase):
@@ -11,19 +11,20 @@ class TestInstall(IntegrationTestCase):
     def setUp(self):
         """Custom shared utility setup for tests."""
         self.portal = self.layer["portal"]
-        self.installer = api.portal.get_tool("portal_quickinstaller")
+        self.request = self.layer["request"]
+        self.installer = get_installer(self.portal, self.request)
 
     def test_product_installed(self):
-        """Test if collective.dms.scanbehavior is installed with portal_quickinstaller."""
+        """Test if collective.dms.scanbehavior is installed."""
         self.assertTrue(
-            self.installer.isProductInstalled("collective.dms.scanbehavior")
+            self.installer.is_product_installed("collective.dms.scanbehavior")
         )
 
     def test_uninstall(self):
         """Test if collective.dms.scanbehavior is cleanly uninstalled."""
-        self.installer.uninstallProducts(["collective.dms.scanbehavior"])
+        self.installer.uninstall_product("collective.dms.scanbehavior")
         self.assertFalse(
-            self.installer.isProductInstalled("collective.dms.scanbehavior")
+            self.installer.is_product_installed("collective.dms.scanbehavior")
         )
 
     # browserlayer.xml
