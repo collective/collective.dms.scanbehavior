@@ -6,9 +6,6 @@
 
     <include package="plone.behavior" file="meta.zcml" />
 
-    <include package="plone.directives.form" file="meta.zcml" />
-    <include package="plone.directives.form" />
-
    <plone:behavior
         title="Scan metadata"
         description="Adds scan information fields"
