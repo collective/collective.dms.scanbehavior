@@ -15,46 +15,42 @@ import datetime
 class IScanFields(model.Schema):
 
     model.fieldset(
-        'scan',
-        label=_(u'Scan'),
+        "scan",
+        label=_(u"Scan"),
         fields=(
-            'scan_id',
-            'version',
-            'pages_number',
-            'scan_date',
-            'scan_user',
-            'scanner',
-            'to_sign',
-            'signed',
+            "scan_id",
+            "version",
+            "pages_number",
+            "scan_date",
+            "scan_user",
+            "scanner",
+            "to_sign",
+            "signed",
         ),
     )
 
     scan_id = schema.TextLine(
         title=_(
-            u'scan_id',
-            default=u'Scan id',
+            u"scan_id",
+            default=u"Scan id",
         ),
         required=False,
     )
 
-    version = schema.Int(
-        title=_(u'Version'),
-        required=False,
-        default=0
-    )
+    version = schema.Int(title=_(u"Version"), required=False, default=0)
 
     pages_number = schema.Int(
         title=_(
-            u'pages_number',
-            default=u'Pages numbers',
+            u"pages_number",
+            default=u"Pages numbers",
         ),
         required=False,
     )
 
     scan_date = schema.Datetime(
         title=_(
-            u'scan_date',
-            default=u'Scan date',
+            u"scan_date",
+            default=u"Scan date",
         ),
         required=False,
         min=datetime.datetime(1990, 1, 1),
@@ -63,27 +59,27 @@ class IScanFields(model.Schema):
 
     scan_user = schema.TextLine(
         title=_(
-            u'scan_user',
-            default=u'Scan user',
+            u"scan_user",
+            default=u"Scan user",
         ),
         required=False,
     )
 
     scanner = schema.TextLine(
         title=_(
-            u'scanner',
-            default=u'scanner',
+            u"scanner",
+            default=u"scanner",
         ),
         required=False,
     )
 
     to_sign = schema.Bool(
-        title=_(u'To sign?'),
+        title=_(u"To sign?"),
         default=False,
     )
 
     signed = schema.Bool(
-        title=_(u'Signed version'),
+        title=_(u"Signed version"),
         default=False,
     )
 
@@ -94,8 +90,8 @@ alsoProvides(IScanFields, IFormFieldProvider)
 @indexer(IScanFields)
 def scan_id_indexer(obj):
     """
-        indexer method
+    indexer method
     """
-    if base_hasattr(obj, 'scan_id') and obj.scan_id:
+    if base_hasattr(obj, "scan_id") and obj.scan_id:
         return obj.scan_id
     return _marker

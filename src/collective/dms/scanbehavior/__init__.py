@@ -4,7 +4,7 @@
 from zope.i18nmessageid import MessageFactory
 
 
-_ = MessageFactory('collective.dms.scanbehavior')
+_ = MessageFactory("collective.dms.scanbehavior")
 
 
 def initialize(context):
