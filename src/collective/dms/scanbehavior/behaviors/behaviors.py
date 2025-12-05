@@ -24,8 +24,6 @@ class IScanFields(model.Schema):
             "scan_date",
             "scan_user",
             "scanner",
-            "to_sign",
-            "signed",
         ),
     )
 
@@ -71,16 +69,6 @@ class IScanFields(model.Schema):
             default=u"scanner",
         ),
         required=False,
-    )
-
-    to_sign = schema.Bool(
-        title=_(u"To sign?"),
-        default=False,
-    )
-
-    signed = schema.Bool(
-        title=_(u"Signed version"),
-        default=False,
     )
 
 

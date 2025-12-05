@@ -33,16 +33,8 @@ msgstr ""
 msgid "Scan metadata"
 msgstr ""
 
-#: ../behaviors/behaviors.py:88
-msgid "Signed version"
-msgstr ""
-
 #: ../testing.zcml:16
 msgid "Steps to ease tests of collective.dms.scanbehavior"
-msgstr ""
-
-#: ../behaviors/behaviors.py:83
-msgid "To sign?"
 msgstr ""
 
 #: ../behaviors/behaviors.py:45

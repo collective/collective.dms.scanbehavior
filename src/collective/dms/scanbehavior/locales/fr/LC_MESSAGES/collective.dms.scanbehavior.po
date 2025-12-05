@@ -30,17 +30,9 @@ msgstr "Scan"
 msgid "Scan metadata"
 msgstr "Métadonnées de numérisation"
 
-#: ../behaviors/behaviors.py:88
-msgid "Signed version"
-msgstr "Version signée"
-
 #: ../testing.zcml:16
 msgid "Steps to ease tests of collective.dms.scanbehavior"
 msgstr ""
-
-#: ../behaviors/behaviors.py:83
-msgid "To sign?"
-msgstr "À signer?"
 
 #: ../behaviors/behaviors.py:45
 msgid "Version"

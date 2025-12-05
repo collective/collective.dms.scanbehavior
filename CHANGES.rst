@@ -5,7 +5,8 @@ Changelog
 1.3.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Removed 'to_sign' and 'signed' fields from the behavior.
+  [chris-adam]
 
 
 1.3.1 (2024-03-01)
