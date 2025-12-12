@@ -7,7 +7,9 @@ Changelog
 
 - Removed 'to_sign' and 'signed' fields from the behavior.
   [chris-adam]
-
+- Fixed behavior name to `collective.dms.scanbehavior.behaviors.IScanFields`
+  to avoid behavior name changed when code is refactored.
+  [gbastien]
 
 1.3.1 (2024-03-01)
 ------------------

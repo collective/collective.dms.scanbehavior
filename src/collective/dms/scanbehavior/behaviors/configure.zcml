@@ -9,9 +9,10 @@
     <include package="plone.directives.form" file="meta.zcml" />
     <include package="plone.directives.form" />
 
-   <plone:behavior
+    <plone:behavior
         title="Scan metadata"
         description="Adds scan information fields"
+        name="collective.dms.scanbehavior.behaviors.IScanFields"
         provides=".behaviors.IScanFields"
         />
 
