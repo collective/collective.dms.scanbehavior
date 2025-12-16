@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3.2 (unreleased)
+1.3.2 (2025-12-16)
 ------------------
 
 - Removed 'to_sign' and 'signed' fields from the behavior.
