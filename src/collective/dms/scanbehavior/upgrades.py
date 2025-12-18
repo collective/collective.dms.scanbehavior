@@ -18,9 +18,9 @@ def v2(context):
     types = []
     for fti in ftis.listTypeInfo():
         if (
-            IDexterityFTI.providedBy(fti)
-            and "collective.dms.scanbehavior.behaviors.behaviors.IScanFields"
-            in fti.behaviors
+            IDexterityFTI.providedBy(fti) and
+            "collective.dms.scanbehavior.behaviors.behaviors.IScanFields" in
+            fti.behaviors
         ):
             types.append(fti.getId())
 
