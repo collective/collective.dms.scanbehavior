@@ -41,3 +41,11 @@ def v3(context):
         logger.info('Removed index "%s"...' % index)
     else:
         logger.info('Trying to remove an unexisting index with name "%s"...' % index)
+
+
+def v4(context):
+    catalog = api.portal.get_tool("portal_catalog")
+    registered_columns = catalog.schema()
+    if "scan_id" in registered_columns:
+        catalog.delColumn("scan_id")
+        logger.info("Removed column 'scan_id'...")

@@ -5,8 +5,8 @@ Changelog
 1.3.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Removed scan_id column.
+  [sgeulette]
 
 1.3.2 (2025-12-16)
 ------------------

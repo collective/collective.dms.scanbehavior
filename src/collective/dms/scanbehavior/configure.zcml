@@ -38,4 +38,12 @@
         handler=".upgrades.v3"
         profile="collective.dms.scanbehavior:default" />
 
+    <genericsetup:upgradeStep
+        title="Migration profile for collective.dms.scanbehavior to 4"
+        description="Upgrade from 3 to 4"
+        source="3"
+        destination="4"
+        handler=".upgrades.v4"
+        profile="collective.dms.scanbehavior:default" />
+
 </configure>
