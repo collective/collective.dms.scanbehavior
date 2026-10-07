@@ -1,17 +1,13 @@
 # -*- coding: utf-8 -*-
 """Base module for unittesting."""
 
-from plone.app.robotframework.testing import AUTOLOGIN_LIBRARY_FIXTURE
+from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
-from plone.app.testing import login
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
-from plone.app.testing import setRoles
-from plone.app.testing import TEST_USER_ID
-from plone.app.testing import TEST_USER_NAME
-from plone.testing import z2
+from plone.testing import zope
 
 import collective.dms.scanbehavior
 import unittest
@@ -23,29 +19,16 @@ class CollectiveDmsScanbehaviorLayer(PloneSandboxLayer):
 
     def setUpZope(self, app, configurationContext):
         """Set up Zope."""
-        # Load ZCML
         self.loadZCML(package=collective.dms.scanbehavior, name="testing.zcml")
-        z2.installProduct(app, "collective.dms.scanbehavior")
+        zope.installProduct(app, "collective.dms.scanbehavior")
 
     def setUpPloneSite(self, portal):
-        """Set up Plone."""
-        # Install into Plone site using portal_setup
+        """Install the testing profile: default profile + ScannedDocument test type."""
         applyProfile(portal, "collective.dms.scanbehavior:testing")
-
-        # Login and create some test content
-        setRoles(portal, TEST_USER_ID, ["Manager"])
-        login(portal, TEST_USER_NAME)
-        folder_id = portal.invokeFactory("Folder", "folder")
-        portal[folder_id].reindexObject()
-
-        # Commit so that the test browser sees these objects
-        import transaction
-
-        transaction.commit()
 
     def tearDownZope(self, app):
         """Tear down Zope."""
-        z2.uninstallProduct(app, "collective.dms.scanbehavior")
+        zope.uninstallProduct(app, "collective.dms.scanbehavior")
 
 
 FIXTURE = CollectiveDmsScanbehaviorLayer(name="FIXTURE")
@@ -54,11 +37,9 @@ FIXTURE = CollectiveDmsScanbehaviorLayer(name="FIXTURE")
 INTEGRATION = IntegrationTesting(bases=(FIXTURE,), name="INTEGRATION")
 
 
-FUNCTIONAL = FunctionalTesting(bases=(FIXTURE,), name="FUNCTIONAL")
-
-
 ACCEPTANCE = FunctionalTesting(
-    bases=(FIXTURE, AUTOLOGIN_LIBRARY_FIXTURE, z2.ZSERVER_FIXTURE), name="ACCEPTANCE"
+    bases=(FIXTURE, REMOTE_LIBRARY_BUNDLE_FIXTURE, zope.WSGI_SERVER_FIXTURE),
+    name="ACCEPTANCE",
 )
 
 
@@ -70,9 +51,3 @@ class IntegrationTestCase(unittest.TestCase):
     def setUp(self):
         super(IntegrationTestCase, self).setUp()
         self.portal = self.layer["portal"]
-
-
-class FunctionalTestCase(unittest.TestCase):
-    """Base class for functional tests."""
-
-    layer = FUNCTIONAL
