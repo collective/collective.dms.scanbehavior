@@ -7,7 +7,6 @@ from plone.app.testing import TEST_USER_ID
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.behavior.interfaces import IBehavior
 from plone.supermodel.interfaces import FIELDSETS_KEY
-from Products.CMFPlone.utils import getFSVersionTuple
 from zope.component import getUtility
 from zope.i18n import translate
 from zope.schema import Datetime
@@ -19,10 +18,6 @@ from zope.schema.interfaces import TooSmall
 
 import datetime
 import unittest
-
-
-# known Plone 6 regressions (MIGRATION.md Known issues): pass on Plone 4, fail on Plone 6
-plone6_regression = unittest.expectedFailure if getFSVersionTuple()[0] >= 6 else (lambda func: func)
 
 
 class TestIScanFields(unittest.TestCase):
@@ -108,19 +103,11 @@ class TestBehaviors(unittest.TestCase):
         doc.reindexObject()
         self.assertEqual([b.getObject() for b in catalog(scan_id="IMIO-456")], [doc])
         self.assertEqual(tuple(catalog.uniqueValuesFor("scan_id")), ("IMIO-456",))
-
-    @plone6_regression
-    def test_scan_id_indexer_cleared_value(self):
-        """Separate method: Plone 6 regression, see MIGRATION.md Known issues."""
-        catalog = api.portal.get_tool("portal_catalog")
-        doc = api.content.create(
-            container=self.portal, type="ScannedDocument", id="doc", title="Doc", scan_id="IMIO-123"
-        )
+        # a cleared value is unindexed, also when another content has a scan id
         api.content.create(
-            container=self.portal, type="ScannedDocument", id="doc2", title="Doc 2", scan_id="IMIO-456"
+            container=self.portal, type="ScannedDocument", id="doc4", title="Doc 4", scan_id="IMIO-789"
         )
-        self.assertEqual(len(catalog(scan_id="IMIO-123")), 1)
         doc.scan_id = None
         doc.reindexObject()
-        self.assertEqual(len(catalog(scan_id="IMIO-123")), 0)
-        self.assertEqual(tuple(catalog.uniqueValuesFor("scan_id")), ("IMIO-456",))
+        self.assertEqual(len(catalog(scan_id="IMIO-456")), 0)
+        self.assertEqual(tuple(catalog.uniqueValuesFor("scan_id")), ("IMIO-789",))

@@ -28,6 +28,7 @@ setup(
         "Framework :: Plone :: Addon",
         "Framework :: Plone :: 6.0",
         "Framework :: Plone :: 6.1",
+        "Framework :: Plone :: 6.2",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
         "Operating System :: OS Independent",
@@ -57,7 +58,6 @@ setup(
         "zope.schema",
         "zope.interface",
         "zope.component",
-        "rwproperty",
     ],
     extras_require={
         "test": [

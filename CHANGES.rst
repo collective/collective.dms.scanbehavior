@@ -5,7 +5,10 @@ Changelog
 1.3.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Plone 6.2 compatibility.
+  [chris-adam]
+- Fixed `scan_id` indexer on Plone 6: emptying a scan id broke reindexing.
+  [chris-adam]
 
 
 1.3.3 (2026-04-14)

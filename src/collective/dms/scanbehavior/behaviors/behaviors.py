@@ -5,7 +5,6 @@ from plone.autoform.interfaces import IFormFieldProvider
 from plone.base.utils import base_hasattr
 from plone.indexer import indexer
 from plone.supermodel import model
-from Products.ZCatalog.ZCatalogIndexes import _marker
 from zope import schema
 from zope.interface import alsoProvides
 
@@ -82,4 +81,4 @@ def scan_id_indexer(obj):
     """
     if base_hasattr(obj, "scan_id") and obj.scan_id:
         return obj.scan_id
-    return _marker
+    raise AttributeError("scan_id")
