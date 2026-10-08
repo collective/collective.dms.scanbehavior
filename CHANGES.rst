@@ -5,8 +5,9 @@ Changelog
 2.0.0 (unreleased)
 ------------------
 
-- Plone 6.2 compatibility.
-  [chris-adam]
+- Migrated to Plone 6.2 / Python 3 (Plone 4 dropped), based on the work started by
+  @laulaz on `python3`.
+  [laulaz, chris-adam]
 - Fixed `scan_id` indexer on Plone 6: emptying a scan id broke reindexing.
   [chris-adam]
 
