@@ -2,10 +2,14 @@ Changelog
 =========
 
 
-1.3.4 (unreleased)
+2.0.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Migrated to Plone 6.2 / Python 3 (Plone 4 dropped), based on the work started by
+  @laulaz on `python3`.
+  [laulaz, chris-adam]
+- Fixed `scan_id` indexer on Plone 6: emptying a scan id broke reindexing.
+  [chris-adam]
 
 
 1.3.3 (2026-04-14)
