@@ -1,6 +1,5 @@
 """Installer for the collective.dms.scanbehavior package."""
 
-from setuptools import find_packages
 from setuptools import setup
 
 long_description = (
@@ -32,7 +31,6 @@ setup(
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
@@ -45,12 +43,9 @@ setup(
     author_email="franck.o.ngaha@gmail.com, sgeulette@imio.be",
     url="http://pypi.python.org/pypi/collective.dms.scanbehavior",
     license="GPL",
-    packages=find_packages("src"),
-    namespace_packages=["collective", "collective.dms"],
-    package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.9",
+    python_requires=">=3.10",
     install_requires=[
         "plone.api",
         "plone.app.dexterity",
