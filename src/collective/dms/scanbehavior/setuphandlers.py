@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 def isNotCurrentProfile(context):
     return context.readDataFile("collectivedmsscanbehavior_marker.txt") is None
 

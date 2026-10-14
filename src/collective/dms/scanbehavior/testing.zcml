@@ -1,16 +1,20 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="collective.dms.scanbehavior">
+    i18n_domain="collective.dms.scanbehavior"
+    >
+
+  <!-- Not loaded by PLONE_FIXTURE on Plone 4.3 (z3c.autoinclude only works in an instance) -->
+  <include package="plone.app.dexterity" />
 
   <include file="configure.zcml" />
 
   <genericsetup:registerProfile
       name="testing"
       title="collective.dms.scanbehavior tests"
-      directory="profiles/testing"
       description="Steps to ease tests of collective.dms.scanbehavior"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/testing"
       />
 
 </configure>
