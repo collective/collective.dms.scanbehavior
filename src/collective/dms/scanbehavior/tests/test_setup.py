@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Setup/installation tests for this package."""
 
 from collective.dms.scanbehavior.interfaces import ICollectiveDmsScanbehaviorLayer
@@ -7,7 +6,6 @@ from plone import api
 from plone.browserlayer import utils
 
 import unittest
-
 
 try:
     from plone.base.utils import get_installer
@@ -20,7 +18,10 @@ class TestInstall(IntegrationTestCase):
 
     def test_default_profile(self):
         setup = api.portal.get_tool("portal_setup")
-        self.assertEqual(setup.getLastVersionForProfile("collective.dms.scanbehavior:default"), ("4",))
+        self.assertEqual(
+            setup.getLastVersionForProfile("collective.dms.scanbehavior:default"),
+            ("4",),
+        )
         self.assertIn(ICollectiveDmsScanbehaviorLayer, utils.registered_layers())
         catalog = api.portal.get_tool("portal_catalog")
         self.assertIn("scan_id", catalog.indexes())

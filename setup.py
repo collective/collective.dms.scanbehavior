@@ -1,18 +1,16 @@
-# -*- coding: utf-8 -*-
 """Installer for the collective.dms.scanbehavior package."""
 
 from setuptools import find_packages
 from setuptools import setup
 
-
 long_description = (
     open("README.rst").read() + "\n" + "Contributors\n"
-    "============\n" +
-    "\n" +
-    open("CONTRIBUTORS.rst").read() +
-    "\n" +
-    open("CHANGES.rst").read() +
-    "\n"
+    "============\n"
+    + "\n"
+    + open("CONTRIBUTORS.rst").read()
+    + "\n"
+    + open("CHANGES.rst").read()
+    + "\n"
 )
 
 
@@ -23,6 +21,7 @@ setup(
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
@@ -38,6 +37,7 @@ setup(
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     keywords="Python Zope Plone",
@@ -50,19 +50,31 @@ setup(
     package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
+    python_requires=">=3.9",
     install_requires=[
         "plone.api",
-        "setuptools",
         "plone.app.dexterity",
+        "plone.autoform",
+        "plone.base",
         "plone.behavior",
-        "zope.schema",
+        "plone.dexterity",
+        "plone.indexer",
+        "plone.supermodel",
+        "Products.GenericSetup",
+        "zope.i18nmessageid",
         "zope.interface",
-        "zope.component",
+        "zope.publisher",
+        "zope.schema",
     ],
     extras_require={
         "test": [
-            "plone.app.testing",
             "plone.app.robotframework[debug]",
+            "plone.app.testing",
+            "plone.browserlayer",
+            "plone.testing",
+            "robotsuite",
+            "zope.component",
+            "zope.i18n",
         ],
     },
     entry_points="""

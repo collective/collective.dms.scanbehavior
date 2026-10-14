@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.dms.scanbehavior.behaviors.behaviors import IScanFields
 from collective.dms.scanbehavior.testing import INTEGRATION
 from plone import api
@@ -37,14 +36,25 @@ class TestIScanFields(unittest.TestCase):
             behavior = getUtility(IBehavior, name=name)
             self.assertIs(behavior.interface, IScanFields)
             self.assertEqual(behavior.title, "Scan metadata")
-            self.assertEqual(translate(behavior.title, target_language="fr"), "Métadonnées de numérisation")
+            self.assertEqual(
+                translate(behavior.title, target_language="fr"),
+                "Métadonnées de numérisation",
+            )
         self.assertTrue(IFormFieldProvider.providedBy(IScanFields))
-        doc = api.content.create(container=self.portal, type="ScannedDocument", id="doc", title="Doc")
+        doc = api.content.create(
+            container=self.portal, type="ScannedDocument", id="doc", title="Doc"
+        )
         self.assertTrue(IScanFields.providedBy(doc))
 
     def test_fields(self):
         fields = [
-            (name, field.__class__, field.required, field.default, translate(field.title, target_language="fr"))
+            (
+                name,
+                field.__class__,
+                field.required,
+                field.default,
+                translate(field.title, target_language="fr"),
+            )
             for name, field in getFieldsInOrder(IScanFields)
         ]
         self.assertEqual(
@@ -61,9 +71,14 @@ class TestIScanFields(unittest.TestCase):
         fieldset = IScanFields.queryTaggedValue(FIELDSETS_KEY)[0]
         self.assertEqual(fieldset.__name__, "scan")
         self.assertEqual(translate(fieldset.label, target_language="fr"), "Scan")
-        self.assertEqual(list(fieldset.fields), [name for name, field in getFieldsInOrder(IScanFields)])
+        self.assertEqual(
+            list(fieldset.fields),
+            [name for name, field in getFieldsInOrder(IScanFields)],
+        )
         # default value on new content
-        doc = api.content.create(container=self.portal, type="ScannedDocument", id="doc", title="Doc")
+        doc = api.content.create(
+            container=self.portal, type="ScannedDocument", id="doc", title="Doc"
+        )
         self.assertEqual(doc.version, 0)
         self.assertIsNone(doc.scan_id)
 
@@ -76,8 +91,12 @@ class TestIScanFields(unittest.TestCase):
         self.assertLessEqual(scan_date.max, today + datetime.timedelta(days=7))
         scan_date.validate(datetime.datetime(1990, 1, 1))
         scan_date.validate(today)
-        self.assertRaises(TooSmall, scan_date.validate, datetime.datetime(1989, 12, 31, 23, 59))
-        self.assertRaises(TooBig, scan_date.validate, today + datetime.timedelta(days=8))
+        self.assertRaises(
+            TooSmall, scan_date.validate, datetime.datetime(1989, 12, 31, 23, 59)
+        )
+        self.assertRaises(
+            TooBig, scan_date.validate, today + datetime.timedelta(days=8)
+        )
 
 
 class TestBehaviors(unittest.TestCase):
@@ -91,11 +110,23 @@ class TestBehaviors(unittest.TestCase):
     def test_scan_id_indexer(self):
         catalog = api.portal.get_tool("portal_catalog")
         doc = api.content.create(
-            container=self.portal, type="ScannedDocument", id="doc", title="Doc", scan_id="IMIO-123"
+            container=self.portal,
+            type="ScannedDocument",
+            id="doc",
+            title="Doc",
+            scan_id="IMIO-123",
         )
         # empty values are not indexed
-        api.content.create(container=self.portal, type="ScannedDocument", id="doc2", title="Doc 2")
-        api.content.create(container=self.portal, type="ScannedDocument", id="doc3", title="Doc 3", scan_id="")
+        api.content.create(
+            container=self.portal, type="ScannedDocument", id="doc2", title="Doc 2"
+        )
+        api.content.create(
+            container=self.portal,
+            type="ScannedDocument",
+            id="doc3",
+            title="Doc 3",
+            scan_id="",
+        )
         self.assertEqual([b.getObject() for b in catalog(scan_id="IMIO-123")], [doc])
         self.assertEqual(tuple(catalog.uniqueValuesFor("scan_id")), ("IMIO-123",))
         # searches process the Plone 6 indexing queue, uniqueValuesFor doesn't
@@ -105,7 +136,11 @@ class TestBehaviors(unittest.TestCase):
         self.assertEqual(tuple(catalog.uniqueValuesFor("scan_id")), ("IMIO-456",))
         # a cleared value is unindexed, also when another content has a scan id
         api.content.create(
-            container=self.portal, type="ScannedDocument", id="doc4", title="Doc 4", scan_id="IMIO-789"
+            container=self.portal,
+            type="ScannedDocument",
+            id="doc4",
+            title="Doc 4",
+            scan_id="IMIO-789",
         )
         doc.scan_id = None
         doc.reindexObject()

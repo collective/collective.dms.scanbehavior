@@ -1,4 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <object name="portal_catalog">
-    <index name="scan_id" meta_type="FieldIndex" remove="True"/>
+  <index meta_type="FieldIndex"
+         name="scan_id"
+         remove="True"
+  />
 </object>

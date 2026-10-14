@@ -10,6 +10,8 @@ Changelog
   [laulaz, chris-adam]
 - Fixed `scan_id` indexer on Plone 6: emptying a scan id broke reindexing.
   [chris-adam]
+- Added plone.meta configuration (tox, pre-commit, GitHub Actions).
+  [chris-adam]
 
 
 1.3.3 (2026-04-14)

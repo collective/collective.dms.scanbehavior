@@ -1,33 +1,37 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="collective.dms.scanbehavior">
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.dms.scanbehavior"
+    >
 
-    <i18n:registerTranslations directory="locales" />
+  <i18n:registerTranslations directory="locales" />
 
-    <five:registerPackage package="." initialize=".initialize" />
+  <five:registerPackage
+      package="."
+      initialize=".initialize"
+      />
 
-    <include package="plone.api" />
+  <include package="plone.api" />
 
-    <include package=".browser" />
-    <include package=".behaviors" />
+  <include package=".browser" />
+  <include package=".behaviors" />
 
-    <genericsetup:registerProfile
-        name="default"
-        title="collective.dms.scanbehavior"
-        directory="profiles/default"
-        description="Installs the collective.dms.scanbehavior add-on."
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-        />
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.dms.scanbehavior"
+      description="Installs the collective.dms.scanbehavior add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      />
 
-    <genericsetup:registerProfile
-        name="uninstall"
-        title="collective.dms.scanbehavior uninstall"
-        directory="profiles/uninstall"
-        description="Uninstalls the collective.dms.scanbehavior add-on."
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-        />
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="collective.dms.scanbehavior uninstall"
+      description="Uninstalls the collective.dms.scanbehavior add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      />
 
 </configure>

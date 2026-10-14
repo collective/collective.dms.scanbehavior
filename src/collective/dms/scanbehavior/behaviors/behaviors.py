@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from collective.dms.scanbehavior import _
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.base.utils import base_hasattr

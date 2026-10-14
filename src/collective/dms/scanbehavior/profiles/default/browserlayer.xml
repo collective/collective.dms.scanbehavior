@@ -1,7 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <layers>
-  <layer
-    name="collective.dms.scanbehavior"
-    interface="collective.dms.scanbehavior.interfaces.ICollectiveDmsScanbehaviorLayer"
+  <layer interface="collective.dms.scanbehavior.interfaces.ICollectiveDmsScanbehaviorLayer"
+         name="collective.dms.scanbehavior"
   />
 </layers>
