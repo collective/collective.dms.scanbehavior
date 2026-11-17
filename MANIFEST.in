@@ -1,10 +1,9 @@
-graft src
+graft src/collective
 graft docs
-include *.rst *.in *.txt
-
-# added by check_manifest.py
+include *.cfg *.rst *.in Makefile requirements-*.txt
+exclude .coveragerc
+exclude .installed.cfg
+exclude .mr.developer.cfg
 recursive-include docs *.GPL
 recursive-include docs *.rst
-recursive-exclude src *.pyc
-recursive-exclude buildout.d *.cfg
-exclude *.cfg buildout.d
+global-exclude *.pyc

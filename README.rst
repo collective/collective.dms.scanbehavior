@@ -1,3 +1,6 @@
+.. image:: https://github.com/collective/collective.dms.scanbehavior/actions/workflows/meta.yml/badge.svg?branch=master
+    :target: https://github.com/collective/collective.dms.scanbehavior/actions/workflows/meta.yml
+
 ==========================================================================
 collective.dms.scanbehavior
 ==========================================================================
@@ -6,12 +9,13 @@ Features
 --------
 
 This behavior adds some metadata related to scanning:
-* scan_id : scan identification as a barcode
-* version : version number
-* pages_number : pages number
-* scan_date : scan date
-* scan_user : scan user
-* scanner : scanner or pc information
+
+- scan_id : scan identification as a barcode
+- version : version number
+- pages_number : pages number
+- scan_date : scan date
+- scan_user : scan user
+- scanner : scanner or pc information
 
 Translations
 ------------
@@ -35,6 +39,12 @@ Install collective.dms.scanbehavior by adding it to your buildout::
 
 
 and then running "bin/buildout"
+
+Versions
+--------
+
+- Version 2.x is for Plone 6+ only
+- Version 1.x is for Plone 4
 
 Contribute
 ----------
