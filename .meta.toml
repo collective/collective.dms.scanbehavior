@@ -21,7 +21,7 @@ report.html
 """
 
 [tox]
-test_matrix = {"6.3" = ["*"], "6.2" = ["*"], "6.1" = ["*"]}
+test_matrix = {"6.2" = ["*"]}
 test_environment_variables = """
     zope_i18n_compile_mo_files=true
     # Playwright (rfbrowser init) does not know ubuntu-latest 26.04 yet
